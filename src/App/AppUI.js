@@ -35,7 +35,13 @@ function AppUI() {
             text={todo.text}
             completed={todo.completed}
             onComplete={() => completeTodo(todo.text)}
-            onDelete={() => deleteTodo(todo.text)}
+            onDelete={() => {
+              <Modal>
+                <TodoForm />
+              </Modal>;
+              deleteTodo(todo.text)
+            }
+            }
           />
         ))}
       </TodoList>
