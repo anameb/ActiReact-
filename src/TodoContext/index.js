@@ -24,6 +24,7 @@ function TodoProvider(props) {
     searchedTodos = todos.filter(todo => {
       const todoText = todo.text.toLowerCase();
       const searchText = searchValue.toLowerCase();
+      console.log("Busqueda en Todos");
       return todoText.includes(searchText);
     });
   }
@@ -34,6 +35,7 @@ function TodoProvider(props) {
       completed: false,
       text,
     });
+    console.log("guardando");
     saveTodos(newTodos);
   };
 
